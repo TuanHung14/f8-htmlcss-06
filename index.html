@@ -14,6 +14,8 @@
      <link rel="stylesheet" href="./asset/css/reset.css">
     <!-- style css -->
     <link rel="stylesheet" href="./asset/css/style.css">
+    <!-- reponsive -->
+     <link rel="stylesheet" href="./asset/css/reponsive.css">
     <!-- Embeb icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -27,9 +29,12 @@
                     </a>
                     <span class=""><a href="#!" class="header__title">hi@arif.interactive</a></span>
                 </div>
+                <label for="menu-checkbox" class="toggel-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </label>
                 <img src="./asset/img/Logo.png" alt="Logo" class="header__logo">
                 <nav class="navbar">
-                    <ul class="navbar__list">
+                    <ul class="navbar__list" id="pc-nav">
                         <li class="navbar__item">
                             <a href="" class="navbar__link">Projects</a>
                         </li>
@@ -47,7 +52,21 @@
             </div>
         </div>
     </header>
-    <main style="height: 10000px;">
+    <header class="mobile-header">
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <div class="menu-drawer">
+            <a href="#">
+                <ul id="mobile-nav"></ul>
+                <script>
+                    const pcNav = document.querySelector('#pc-nav');
+                    const mobileNav = document.querySelector('#mobile-nav');
+                    mobileNav.innerHTML = pcNav.innerHTML;
+                </script>
+            </a>
+        </div>
+    </header>
+    <main>
         <section class="hero">
             <div class="container">
                 <div class="hero__inner">
@@ -172,7 +191,7 @@
                     <h2 class="section-heading">Specialities</h2>
                     <p class="section-title service__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                 </div>
-                <div class="row row-cols-lg-3 row-cols-12 service__list">
+                <div class="row row-cols-lg-3 row-cols-1 service__list">
                     <!-- service-item-1 -->
                     <div class="col">
                         <div class="service-item">
@@ -204,6 +223,11 @@
                         </div>
                     </div>
                 </div>
+                <div class="service__direction">
+                    <button class="dot"></button>
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                </div>
             </div>
         </section>
         <section class="project">
@@ -216,7 +240,7 @@
                         <p class="section-title project__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
                     </div>
                 </div>
-                <div class="project__list row row-cols-lg-2 row-cols-12">
+                <div class="project__list row row-cols-lg-2 row-cols-1">
                     <div class="col">
                         <!-- project-item-1 -->
                         <div class="project-item">
@@ -278,6 +302,210 @@
                 </div>
             </div>
         </section>
+        <section class="about">
+            <div class="container">
+                <div class="about__header">
+                    <h5 class="about__text">Hey,,,,It’s Arif</h5>
+                    <h2 class="section-heading about__heading">Interactive Designer</h2>
+                    <p class="section-title about__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-1 g-0">
+                        <div class="about__content">
+                            <article class="about-item">
+                                <p class="about-item__number">08+</p>
+                                <p class="about-item__title">Years Experience</p>
+                            </article>
+                            <article class="about-item">
+                                <p class="about-item__number">21+</p>
+                                <p class="about-item__title">Features & Awards</p>
+                            </article>
+                            <article class="about-item">
+                                <p class="about-item__number">97%</p>
+                                <p class="about-item__title">Clients Rating</p>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__video">
+                    <img src="./asset/img/about-1.jpg" alt="" class="about__img">
+                    <div class="about__play">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <div class="about__active">
+                        <a href="#!" class="btn about__btn">Intro Video</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="feedback">
+            <div class="container">
+                <section class="feedback__header">
+                    <h2 class="section-heading">What people says</h2>
+                    <p class="section-title feedback__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                </section>
+                <div class="feedback__list">
+                    <article class="feedback-item">
+                        <h3 class="feedback-item__desc">“Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa.”</h3>
+                        <div class="feedback-item__author">
+                            <div class="feedback-item__avartar">
+                                <img src="./asset/img/avartar-1.jpg" alt="" class="feedback-item__img">
+                            </div>
+                            <p class="feedback-item__name">Joe Elia</p>
+                        </div>
+                        <p class="feedback-item__job">User Interface Design at PCL Lab</p>
+                    </article>
+                </div>
+                <div class="feedback__direction">
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                    <button class="dot active"></button>
+                    <button class="dot"></button>
+                    <button class="dot"></button>
+                </div>
+            </div>
+            <img src="./asset/icon/feedback-1.svg" alt="" class="feedback__deco feedback__deco-1">
+            <img src="./asset/icon/feedback-2.svg" alt="" class="feedback__deco feedback__deco-2">
+        </section>
+        <section class="question">
+            <div class="container">
+                <h2 class="section-heading question__heading">A few questions clients normally ask me</h2>
+                <div class="question__list">
+                    <article class="question-item">
+                        <input type="checkbox" class="question-item__checked" id="checkbox-1" hidden> 
+                        <div class="question-item__block">
+                            <div class="question-item__content">
+                                <h3 class="question-item__title">What is your hourly rate?</h3>
+                                <p class="question-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                            <label for="checkbox-1" class="question-item__label"></label>
+                        </div>
+                    </article>
+
+                    <article class="question-item">
+                        <input type="checkbox" class="question-item__checked" id="checkbox-2" hidden> 
+                        <div class="question-item__block">
+                            <div class="question-item__content">
+                                <h3 class="question-item__title">What type of projects do you take on?</h3>
+                                <p class="question-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                            <label for="checkbox-2" class="question-item__label"></label>
+                        </div>
+                    </article>
+
+                    <article class="question-item">
+                        <input type="checkbox" class="question-item__checked" id="checkbox-3" hidden> 
+                        <div class="question-item__block">
+                            <div class="question-item__content">
+                                <h3 class="question-item__title">How do you charge for projects ?</h3>
+                                <p class="question-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                            <label for="checkbox-3" class="question-item__label"></label>
+                        </div>
+                    </article>
+
+                    <article class="question-item">
+                        <input type="checkbox" class="question-item__checked" id="checkbox-4" hidden> 
+                        <div class="question-item__block">
+                            <div class="question-item__content">
+                                <h3 class="question-item__title">What time-zone do you work in?</h3>
+                                <p class="question-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                            <label for="checkbox-4" class="question-item__label"></label>
+                        </div>
+                    </article>
+
+                    <article class="question-item">
+                        <input type="checkbox" class="question-item__checked" id="checkbox-5" hidden> 
+                        <div class="question-item__block">
+                            <div class="question-item__content">
+                                <h3 class="question-item__title">How often can we communicate?</h3>
+                                <p class="question-item__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                            </div>
+                            <label for="checkbox-5" class="question-item__label"></label>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="atmosphere">
+            <div class="container">
+                <section class="atmosphere__header">
+                    <h2 class="section-heading">My atmosphere</h2>
+                    <p class="section-title atmosphere__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                    <a href="#!" class="atmosphere__link">@interaction_arif</a>
+                </section>
+                <div class="atmosphere__list row row-cols-lg-3 row-cols-12">
+                    <div class="col">
+                        <article class="atmosphere-item">
+                            <a href="#!"><img src="./asset/img/project-1.jpg" alt="" class="atmosphere-item__img"></a>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="atmosphere-item">
+                            <a href="#!"><img src="./asset/img/project-2.jpg" alt="" class="atmosphere-item__img"></a>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="atmosphere-item">
+                            <a href="#!"><img src="./asset/img/project-3.jpg" alt="" class="atmosphere-item__img"></a>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="banner">
+            <div class="container header-container">
+                <section class="banner__inner">
+                    <div class="banner__icon">😘</div>
+                    <h2 class="section-heading banner__heading">Got a project? Let's talk</h2>
+                    <p class="section-title banner__title">Lorem ipsum dolor sit amet, consectetur adipiscing elit. In urna, non nisl tincidunt ut elementum turpis.</p>
+                    <a href="#!" class="banner__btn btn">Book a Call</a>
+                    <img src="./asset/icon/banner-1.svg" alt="" class="banner__deco banner__deco-1">
+                    <img src="./asset/icon/banner-2.svg" alt="" class="banner__deco banner__deco-2">
+                    <img src="./asset/icon/banner-2.svg" alt="" class="banner__deco banner__deco-3">
+                </section>
+            </div>
+        </section>
     </main>
+    <footer class="footer">
+        <div class="container footer__container">
+            <div class="footer__inner">
+                <div class="footer__email">
+                    <a href="#!" class="footer__icon">
+                        <img src="./asset/icon/message.svg" alt="message">
+                    </a>
+                    <span class=""><a href="#!" class="footer__title">hi@arif.interactive</a></span>
+                </div>
+                <img src="./asset/img/Logo.png" alt="Logo" class="footer__logo">
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Projects</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Journey</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Service</a>
+                        </li>
+                        <li class="navbar__item">
+                            <a href="" class="navbar__link">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="footer__line"></div>
+            <div class="footer__copyright">
+                <p class="footer__text">Copyright © 2021 hi@arif.interactive. All rights reserved.</p>
+                <div class="footer__social">
+                    <a href="#!" class="footer__link">Privacy Policy</a>
+                    <a href="#!" class="footer__link">Terms of Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
