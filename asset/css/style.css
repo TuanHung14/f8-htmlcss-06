@@ -63,7 +63,8 @@ a{
     padding-top: 47px;
     background-color: #FBFAFF;
 }
-.header-container{
+.header-container,
+.banner-container{
     max-width: 1330px;
 }
 .header__inner{
@@ -132,7 +133,7 @@ a{
     height: 705px;
 }
 .hero__img{
-    position: absolute;
+    position: relative;
     z-index: 1;
     display: block;
     max-width: 100%;
@@ -437,6 +438,7 @@ a{
 .about__img{
     width: 100%;
     height: 100%;
+    object-fit: cover;
 }
 .about__play{
     position: absolute;
@@ -559,7 +561,6 @@ a{
 }
 .question-item{
     max-width: 1010px;
-    
 }
 .question-item:not(:first-child){
     margin-top: 60px;
@@ -662,7 +663,7 @@ a{
 }
 /* banner */
 .banner{
-    padding: 70px 0 50px;
+    padding-top: 70px;
 }
 .banner__inner{
     position: relative;
@@ -708,7 +709,7 @@ a{
 }
 /* footer */
 .footer{
-    margin-top: 50px;
+    margin-top: 100px;
 }
 .footer__container{
     max-width: 1600px;

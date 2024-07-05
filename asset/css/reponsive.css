@@ -9,9 +9,15 @@
     .service__direction{
         display: none;
     }
+    .atmosphere__direction{
+        display: none;
+    }
 }
 /* Mobile */
 @media (max-width: 575.98px) {
+    .container{
+        padding: 0 20px;
+    }
     .btn{
         font-size: 1.6rem;
         line-height: 1.87; /* 187.5% */
@@ -51,7 +57,7 @@
     .header__title{
         display: none;
     }
-    .navbar{
+    .header .navbar{
         display: none;
     }
     
@@ -84,7 +90,7 @@
     }
     .menu-drawer{
         position: fixed;
-        inset: 0 65% 0 0;
+        inset: 0 30% 0 0;
         background-color: #FFF;
         z-index: 3;
         padding: 60px;
@@ -118,8 +124,9 @@
     letter-spacing: -1.68px;
     }
     .hero__title{
-    font-size: 1.6rem;
-    line-height: 1.62;
+        font-size: 1.6rem;
+        line-height: 1.62;
+        max-width: 100%;
     }
     .hero__row{
         margin-top: 30px;
@@ -193,5 +200,247 @@
         align-items: center;
         justify-content: center;
         gap: 15px;
+    }
+    /* project */
+    .project{
+        padding: 69px 0 60px ;
+    }
+    .project__heading{
+        text-align: center;
+        max-width: 301px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project__title{
+        text-align: center;
+        max-width: 350px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .project__list{
+        margin-top: 60px;
+    }
+    .project-item{
+        padding: 20px 15px;
+
+        column-gap: 22px;
+    }
+    .project-item__title{
+        font-size: 2.4rem;
+        line-height: 1.41; /* 141.667% */
+        letter-spacing: -0.96px;
+    }
+    .project-item__desc,
+    .project-item__link{
+        margin: 0;
+    }
+    .project-item__desc{
+        font-size: 1.4rem;
+        line-height: 1.42; /* 142.857% */
+    }
+    .project-item__link{
+        font-size: 1.6rem;
+        line-height: 1.75; /* 175% */
+    }
+    .project-item__media{
+        max-width: 122px;
+        height: 93px;
+    }
+    .project__active{
+        margin-top: 50px;
+    }
+    /* about */
+    .about{
+        padding-top: 120px;
+    }
+    .about__text{
+        font-size: 2rem;
+        line-height: 2;
+        letter-spacing: -0.8px;
+    }
+    .about__content{
+        margin-top: 50px;
+        padding: 30px 16px;
+        justify-content: space-between;
+    }
+    .about-item__number{
+        font-size: 3rem;
+        line-height: 1.4; /* 140% */
+        letter-spacing: 0.9px;
+    }
+    .about-item__title{
+        font-size: 1.6rem;
+        line-height: 1.37; /* 137.5% */
+    }
+    .about__video{
+        margin-top: 40px;
+        height: 276px;
+    }
+    .about__play{
+        width: 77px;
+        height: 77px;
+    }
+    .about__active{
+        width: 118px;
+        height: 44px;
+    }
+    .about__btn{
+        min-width: 118px;
+        height: 44px;;
+        font-size: 1.2rem;
+        line-height: 1.5; /* 250% */
+        text-transform: uppercase;
+    }
+    /* feedback */
+    .feedback{
+        margin-top: -108px;
+        padding: 229px 0 67px;
+
+    }
+    .feedback__title{
+        max-width: 100%;
+    }
+    .feedback__list{
+        margin-top: 40px;
+    }
+    .feedback-item__desc{
+        max-width: 100%;
+        color: #51586A;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.66; /* 166.667% */
+    }
+    .feedback-item__author{
+        margin-top: 48px;
+    }
+    .feedback-item__name{
+        font-size: 2.4rem;
+        line-height: 1.66; /* 166.667% */
+    }
+    .feedback-item__job{
+        margin-top: 3px;
+        font-size: 1.6rem;
+        line-height: 1.81; /* 181.25% */
+    }
+    .feedback__direction{
+        margin-top: 20px;
+    }
+    .feedback__deco{
+        max-width: 20%;
+    }
+    .question{
+        margin-top: 120px;
+        padding-bottom: 60px;
+    }
+    .question__heading{
+        max-width: 100%;
+    }
+    .question__list{
+        margin-top: 42px;
+    }
+    .question-item{
+        max-width: 100%;
+
+    }
+    .question-item__title{
+        font-size: 2.4rem;
+        line-height: 1.25; /* 125% */
+        letter-spacing: -0.96px;
+    }
+    .question-item__desc{
+        font-size: 1.6rem;
+        line-height: 1.62; /* 162.5% */
+    }
+    .question-item__label{
+        flex-shrink: 0;
+        width: 33px;
+        height: 33px;
+    }
+    .atmosphere{
+        padding: 60px 0 120px;
+    }
+    .atmosphere__title{
+        max-width: 100%;
+    }
+    .atmosphere__link{
+        margin-top: 10px;
+        font-size: 2rem;
+        line-height: 2;
+        letter-spacing: -0.8px;
+    }
+    .atmosphere__list{
+        margin-top: 60px;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+    .atmosphere-item{
+        height: 503px;
+    }
+    .atmosphere__direction{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 15px;
+        margin-top: 40px;
+    }
+    .banner-container{
+        padding: 0;
+    }
+    .banner__inner{
+        padding: 36px 0;
+    }
+    .banner__deco-2,
+    .banner__deco-3{
+        display: none;
+    }
+    .banner__icon{
+        font-size: 5.6rem;
+    }
+    .banner__heading{
+        margin-top: 10px;
+        max-width: 230px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .banner__title{
+        margin-top: 10px;
+        max-width: 350px;
+    }
+    .banner__btn{
+        margin-top: 30px;
+    }
+    .banner__deco-1{
+        max-width: 168%;
+    }
+    .footer{
+        margin-top: 240px;
+    }
+    .footer__inner{
+        flex-direction: column-reverse;
+        row-gap: 58px;
+    }
+    .footer__logo{
+        top: -56%;
+    }
+    .footer__line{
+        display: none;
+    }
+    .footer__copyright{
+        flex-direction: column-reverse;
+        padding: 57px 0 29px;
+        row-gap: 29px;
+    }
+    .footer__text,
+    .footer__link{
+        font-size: 1.8rem;
+        line-height: 1.,66; /* 166.667% */
+    }
+    .footer__line-2{
+        width: calc(100% + 40px);
+        height: 1px;
+        background-color: rgba(12, 7, 32, 0.2);
+    }
+    .navbar__link{
+        padding: 5px 16px;
     }
 }
